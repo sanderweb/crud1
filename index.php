@@ -1,6 +1,5 @@
 <!--http://codewithawa.com/posts/php-crud-create,-edit,-update-and-delete-posts-with-mysql-database-->
 
-
 <?php  include('php_code.php'); ?>
 
 <?php 
