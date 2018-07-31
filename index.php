@@ -73,20 +73,38 @@
         
 	<form method="post" action="php_code.php" >
 
-	<!--newly added field-->
-<input type="hidden" name="id" value="<?php echo $id; ?>">
-<!--modified form fields-->
-<input type="text" name="name" value="<?php echo $name; ?>">
-<input type="text" name="address" value="<?php echo $address; ?>">
+    <!--newly added field-->
+<!--
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+    modified form fields
+    <input type="text" name="name" value="<?php echo $name; ?>">
+    <input type="text" name="address" value="<?php echo $address; ?>">
+-->
     
-	<?php if ($update == true): ?>
-	<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
-    <?php else: ?>
-        <button class="btn" type="submit" name="save" >Save</button>
-    <?php endif; ?>    		
+	    
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <div class="input-group">
+			<label>N Série</label>
+			<input type="text" name="name" value="<?php echo $name; ?>">
+		</div>
+		<div class="input-group">
+			<label>Tonner</label>
+			<input type="text" name="address" value="<?php echo $address; ?>">
+		</div>
+        
+        <div class="input-group">
+			<button class="btn" type="submit" name="save" >Save</button>
+		</div>
 
+        <?php if ($update == true): ?>
+        <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+        <?php else: ?>
+            <button class="btn" type="submit" name="save" >Update</button>
+        <?php endif; ?>   
+        
 	
 
+<!--
 		<div class="input-group">
 			<label>Name</label>
 			<input type="text" name="name" value="">
@@ -95,13 +113,11 @@
 			<label>Address</label>
 			<input type="text" name="address" value="">
 		</div>
-
-	
 		
-
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >Save</button>
 		</div>
+-->
 
 		
 	</form>
